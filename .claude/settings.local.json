@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(head:*)",
+      "Bash(cd /c/agent_u && .venv/Scripts/python -c \"\nfrom google.adk.agents import LlmAgent\nimport google.adk.agents.llm_agent as m\n# Check available fields\nfields = [f for f in m.LlmAgent.model_fields.keys\\(\\)]\nprint\\(fields\\)\n\" 2>&1)",
+      "Bash(cd:*)",
+      "Bash(curl:*)",
+      "Bash(curl -s http://localhost:11434/api/tags | .venv/Scripts/python -c \"import sys,json; d=json.load\\(sys.stdin\\); models=d.get\\('models',[]\\); print\\(f'{len\\(models\\)} model\\(s\\)'\\); [print\\(' -', m['name'], m.get\\('size',''\\)\\) for m in models]\" 2>&1)",
+      "Bash(cd C:/agent_u && python -m pytest tests/ -v --tb=short 2>&1)",
+      "Bash(tail:*)",
+      "Bash(python:*)"
+    ]
+  }
+}

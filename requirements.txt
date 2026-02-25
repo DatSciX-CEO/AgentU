@@ -1,0 +1,8 @@
+google-adk>=1.25.0
+litellm
+pandas
+openpyxl
+pyarrow
+numpy
+pytest>=7.0
+pytest-cov>=4.0
